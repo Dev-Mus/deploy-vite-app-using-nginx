@@ -1,35 +1,20 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
+      <h1>How to Deploy a Vite React App using Nginx server</h1>
       <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
+        Learn the step-by-step process of deploying your Vite React application
+        on an Nginx server. This comprehensive guide covers everything from
+        building your project to configuring Nginx for optimal performance and
+        security. Whether you're a seasoned developer or just getting started,
+        you'll find practical tips and clear instructions to get your app live
+        and running smoothly on the web.
       </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
