@@ -1,5 +1,6 @@
 import "./App.css";
 import Section from "./components/Section";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 const config: Record<
   "home" | "about" | "notFound",
@@ -23,9 +24,14 @@ const config: Record<
 function App() {
   return (
     <>
-      <Section {...config.home} />
-      <Section {...config.about} />
-      <Section {...config.notFound} />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Navigate to="/home" replace />} />
+          <Route path="/home" element={<Section {...config.home} />} />
+          <Route path="/about" element={<Section {...config.about} />} />
+          <Route path="/*" element={<Section {...config.notFound} />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
